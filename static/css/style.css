@@ -1,0 +1,123 @@
+
+/* Giving our navbar some padding and a background color */ */
+/* Giving our navbar some padding and a background color */
+.navbar {
+  padding: 10px;
+  background: #85fd51;
+  position: fixed-top;
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 1;
+}
+
+/* Making our navbar li's inline-block elements this makes it so we can have multiple on the same line. Floats could have been used too */
+.navbar li {
+  display: inline-block;
+  padding: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+  background: rgb(255, 210, 12);
+  border-radius: 3px;
+}
+li a:hover {
+  background-color:rgb(119, 255, 35);
+ }
+ #map,
+body,
+html {
+  height: 100%;
+}
+
+/* Getting rid of the default link styles here */ */
+.navbar li a {
+  color: #000;
+  text-decoration: none;
+}
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+
+
+/* Styling the header, giving it a height, a background color, and some top padding */
+.header {
+  height: 200px;
+  padding-top: 70px;
+  position:relative;
+  background: #f8a5da;
+}
+/* Centering our h1 tag inside our header, giving it a little padding, removing its margin */
+.header h1 {
+  padding: 60px;
+  margin: 0;
+  color: #000;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  text-align: center;
+}
+.data{
+  margin-top: 100px;
+  padding: 40px;
+  color: #000;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  text-align: center;
+}
+.img-responsive-plot{
+
+  top: 0;
+    box-shadow: 0 4px 10px -2px rgba(0,0,0,0.1);
+    z-index: 0;
+    margin-top:20%;
+}
+/* Giving the .post element margin on 3 sides */
+.post {
+  margin-top: 50px;
+  margin-right: 100px;
+  margin-left: 15%;
+}
+/* img {
+  width: 100%;
+} */
+
+/* @media (max-width: 780px) {
+  .navbar li {
+    padding: 10px; 
+    display:flex;
+  margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  background: rgb(255, 12, 154);
+  border-radius: 3px;
+  } */
+
+}

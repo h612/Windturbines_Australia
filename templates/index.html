@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Windturbine Power App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css"> -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> -->
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+
+<body id="page-top">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #6eaad4;">
+    <a class="navbar-brand" href="#">Windpower in Australia</a>
+    <!-- <img class="nav-ufo" width="2px" src="static/images/wt.png"> -->
+    
+    <div class="collapse navbar-collapse container px-5">
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Explore Windturbines In Australia
+            <i class="bi-list"></i>
+        </button> -->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                <li class="sub-nav-li nav-item"><a class="nav-link me-lg-3" href="/map_data">Map API</a></li>
+                <li class="nav-item"><a class="nav-link me-lg-3 bi-chat-text-fill me-2" href="/map">WindTurbines Maps</a></li>
+                <li class="nav-item"><a class="nav-link me-lg-3" href="/predictPower">Predict WindTurbine Power</a></li>
+                <li class="nav-item"><a class="nav-link me-lg-3" href="/scrape">Scrape Latest Data</a></li>
+
+            </ul>
+          
+        </div>
+    </div>
+</nav>
+    
+
+      
+            
+  <div class="container-fluid">
+    <div class="jumbotron text-center" >
+      <img src=https://arenalive.azureedge.net/assets/2018/03/wind-header.jpg alt="Main Image">
+      <h1>Mission to Green Energy: Wind</h1>
+      
+      <p><a class="btn btn-primary btn-lg" id="scrapeExample" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+    <h2><b>Latest WindTurbine News</b></h2>
+    {% for i in range(10) %}
+      {{ wt.news_title[i] }}
+    {% endfor %}
+    <h3>{{ wt.news_title }}</h3>
+    <h4>{{ wt.news_p }}</h4>
+    <p></p>
+    <p></p>
+   
+    <div class="row styled-table">
+      <div class="col-sm-6 col-md-6">
+        <h2>Wind Turbine Location Facts</h2>  
+          {{wt.facts_html|safe}}
+      
+       
+      
+      </div>
+    </div>
+    <hr>
+    <br>
+            </div>
+          </div>
+
+    
+   
+
+  </div>
+  </div>
+  <footer class="page-footer font-small blue">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2022 Copyright:
+      <a href="https://h612.github.io/"> wind-turbine.com</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+         </body>
+
+</html>

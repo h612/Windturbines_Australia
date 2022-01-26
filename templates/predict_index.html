@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Wind Power Predictor App{% endblock %}
+
+{% block content %}
+    <form method="POST">
+    {{ form.csrf_token }}
+    <p>
+        Enter the attributes of Windfarm to Predict how much Power will be generated:
+    </p>
+    <p>
+        {{ form.wind_speed.label }}{{ form.wind_speed(size=10) }}
+    </p>
+    <p>
+        {{ form.motor_torque.label }}{{ form.motor_torque(size=10) }}
+    </p>
+    <p>
+        {{ form.generator_temperature.label }}{{ form.generator_temperature(size=10) }}
+    </p>
+    <p>
+        {{ form.atmospheric_pressure.label }}{{ form.atmospheric_pressure(size=10) }}
+    </p>
+    <p>
+        {{ form.area_temperature.label }}   {{ form.area_temperature(size=10) }}
+    </p>
+
+    <input type="submit" value="Predict">
+    </form>
+    <div>
+        <p style='color:blue'>
+            <h3>Predicted power generation via wind energy (kW/h): {{result}} </h3>
+        </p>
+    </div>
+{% endblock %}

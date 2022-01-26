@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Windturbine Power Predictor App{% endblock %}</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    {% if message %}
+        <p style='color:red'>Note: {{ message }}</p>
+    {% endif %}
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
